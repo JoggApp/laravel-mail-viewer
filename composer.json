@@ -1,0 +1,33 @@
+{
+    "name": "joggapp/laravel-mail-viewer",
+    "description": "View all your mailables at a single place",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Harish Toshniwal",
+            "email": "harish@jogg.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JoggApp\\MailViewer\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.1",
+        "illuminate/routing": "5.6.*|5.7.*",
+        "illuminate/support": "5.6.*|5.7.*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JoggApp\\MailViewer\\MailViewerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
