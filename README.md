@@ -1,3 +1,7 @@
+# Minimum requirement
+
+PHP7.1 is required.
+
 # View all your mailables at a single place
 
 The Design and content team members often need access to the emails your app will be sending out to the users. This is a fairly simple package that makes it possible and tries to minimize developer dependency. By using this package, you can have a dedicated route to view all your mailables at a single place.
