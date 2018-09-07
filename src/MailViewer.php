@@ -23,7 +23,7 @@ class MailViewer
 
     public static function find(string $mail)
     {
-        foreach (config('mailviewer.mailables') as $mailable) {
+        foreach (config('mailviewer.mailables', []) as $mailable) {
             $reflection = new ReflectionClass($mailable);
 
             if ($reflection->getShortName() === $mail) {

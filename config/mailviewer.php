@@ -3,12 +3,12 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Register the mailables that should be accessible
+    | Only the mailables registered here can be accesed using this package
     |--------------------------------------------------------------------------
     |
     | You have to add the mailables including their dependencies
-    | in the following array. When asked for a mailable,
-    | the package will search it here.
+    | in the following array. When asked for a mailable, the
+    | package will search it here for its defination.
     |
     | Eg: [ new OrderShipped(factory(Order::class)->create()) ]
     |

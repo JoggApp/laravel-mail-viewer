@@ -12,10 +12,10 @@ composer require joggapp/laravel-mail-viewer
 
 The package will automatically register itself.
 
-You will have to configure the package settings using the package's config file. You can publish the config file with:
+You will have to configure the package settings using the package's config file to use this package. You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="JoggApp\MailViewer\MailViewerServiceProvider" --tag="config"
+php artisan vendor:publish --provider="JoggApp\MailViewer\MailViewerServiceProvider"
 ```
 
 This will create the package's config file called `mailviewer.php` in the `config` directory. These are the contents of the published config file:
