@@ -38,6 +38,7 @@
         <p>There are no mails</p>
     @else
         <ol>
+            <h3>All Mails</h3>
         @foreach($mails as $mail)
             <li><a href="{{ route('mv-mailviewer', $mail) }}">{{ $mail }}</a></li>
         @endforeach

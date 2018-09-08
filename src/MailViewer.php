@@ -10,15 +10,17 @@ class MailViewer
 {
     public static function all()
     {
-        $files = scandir(app_path('Mail'));
+        $mailables = config('mailviewer.mailables', []);
 
         $mails = [];
 
-        foreach ($files as $file) {
-            $mails[] = str_before($file, '.');
+        foreach ($mailables as $mailable) {
+            $reflection = new ReflectionClass($mailable);
+
+            $mails[] = $reflection->getShortName();
         }
 
-        return array_slice($mails, 2);
+        return $mails;
     }
 
     public static function find(string $mail)
@@ -36,13 +38,7 @@ class MailViewer
 
     public static function url()
     {
-        $url = config('mailviewer.url', 'mails');
-
-        if ((!empty($url)) && is_string($url)) {
-            return $url;
-        }
-
-        throw new Exception('Please set a valid URL to view the mails');
+        return config('mailviewer.url', 'mails');
     }
 
     public static function middlewares()

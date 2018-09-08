@@ -1,6 +1,6 @@
 # View all your mailables at a single place
 
-The Design and content team members often need access to the emails your app will be sending out to the users. This is a fairly simple package that makes it possible and tries to minimize developer dependency. By using this package, you can have a dedicated route to view all your mailables at a single place.
+The Design and content team members often need access to the emails your app will be sending out to the users. This is a fairly simple package that makes it possible and tries to minimize developer dependency. By using this package, you can have a dedicated route to view all your mailables at a single place. Having sharebale URLs to view the mails makes the team co-ordination more smooth.
 
 ## Installation
 
@@ -12,7 +12,7 @@ composer require joggapp/laravel-mail-viewer
 
 The package will automatically register itself.
 
-You will have to configure the package settings using the package's config file to use this package. You can publish the config file with:
+You will have to add the mailables and configure the other settings using the package's config file in order to to use this package. You can publish the config file with:
 
 ```bash
 php artisan vendor:publish --provider="JoggApp\MailViewer\MailViewerServiceProvider"
@@ -77,6 +77,14 @@ return [
 
     'middlewares' => [],
 ];
+```
+
+## Testing
+
+You can run the tests with:
+
+```bash
+vendor/bin/phpunit
 ```
 
 ## Changelog
