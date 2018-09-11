@@ -19,15 +19,8 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - composer-v1-{{ checksum "composer.json" }}
-            - composer-v1-
+      - run: sudo composer self-update
+
       - run: composer install -n -vvv --prefer-dist --ignore-platform-reqs
-      - save_cache:
-          key: composer-v1-{{ checksum "composer.json" }}
-          paths:
-            - vendor
 
       - run: vendor/bin/phpunit
