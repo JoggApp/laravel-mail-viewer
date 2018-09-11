@@ -23,6 +23,4 @@ jobs:
 
       - run: composer install -n -vvv --prefer-dist --ignore-platform-reqs
 
-      - run: composer dump-autoload -o
-
       - run: vendor/bin/phpunit
