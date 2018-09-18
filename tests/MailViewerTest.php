@@ -10,9 +10,9 @@ class MailViewerTest extends BaseTestCase
     {
         parent::setUp();
 
-        $router = $this->app['router'];
-
         $this->packageUrl = config('mailviewer.url');
+
+        $router = $this->app['router'];
 
         $middlewares = config('mailviewer.middlewares');
 
