@@ -21,8 +21,8 @@ return [
     | URL where you want to view the mails
     |--------------------------------------------------------------------------
     |
-    | This is the URL where you can view all the mailables
-    | registered in your application.
+    | This is the URL where you can view all the
+    | mailables registered above.
     |
     */
 
