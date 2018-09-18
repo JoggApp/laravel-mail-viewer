@@ -27,6 +27,8 @@ class MailViewerTest extends BaseTestCase
     /** @test */
     public function it_lists_all_the_mailables_on_the_url_configured_in_config_file()
     {
+        $this->withoutExceptionHandling();
+
         $this->get($this->packageUrl)
             ->assertSee('All Mails')
             ->assertSee('TestEmailForMailViewer');
@@ -35,6 +37,8 @@ class MailViewerTest extends BaseTestCase
     /** @test */
     public function it_renders_the_mailable_on_its_dedicated_route()
     {
+        $this->withoutExceptionHandling();
+
         $this->get(route('mv-mailviewer', 'TestEmailForMailViewer'))
             ->assertSee('The test email view');
     }
