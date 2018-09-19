@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/JoggApp/laravel-mail-viewer.svg?branch=master)](https://travis-ci.org/JoggApp/laravel-mail-viewer)
 [![Total Downloads](https://img.shields.io/packagist/dt/JoggApp/laravel-mail-viewer.svg?style=flat-rounded&colorB=brightgreen)](https://packagist.org/packages/JoggApp/laravel-mail-viewer)
 
-The Design and content team members often need access to the emails your app will be sending out to the users. This is a fairly simple package that makes it possible and tries to minimize developer dependency. By using this package, you can have a dedicated route to view all your mailables at a single place. Having sharebale URLs to view the mails makes the team co-ordination more smooth.
+The Design and content team members often need access to the emails your app will be sending out to the users. This is a fairly simple package that makes it possible and tries to minimize developer dependency. By using this package, you can have a dedicated route to view all your mailables at a single place. Having shareable URLs to view the mails makes the team co-ordination more smooth.
 
 ## Installation
 
