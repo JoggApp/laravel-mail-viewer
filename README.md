@@ -46,8 +46,8 @@ return [
     | URL where you want to view the mails
     |--------------------------------------------------------------------------
     |
-    | This is the URL where you can view all the mailables
-    | registered in your application.
+    | This is the URL where you can view all the
+    | mailables registered above.
     |
     */
 
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'allowed_environments' => ['local', 'staging'],
+    'allowed_environments' => ['local', 'staging', 'testing'],
 
     /*
     |--------------------------------------------------------------------------
@@ -82,6 +82,20 @@ return [
     'middlewares' => [],
 ];
 ```
+
+## How to use
+
+- After setting up the config values as described above, you can see the list of all mailables by visiting the `/mails` route (considering the default url is 'mails' in the config file). You can modify it to whatever you want as per your needs.
+
+- You can also restrict the environments the package should list the mailables in. By default, the `allowed_environments` config is set to allow 3 environments: `local`, `staging` & `testing`. You can further secure it using the `middlewares` config.
+
+- Default view:
+
+List of all mails             |  A particular mail rendered
+:-------------------------:|:-------------------------:
+![](https://user-images.githubusercontent.com/11228182/45781093-bb59ef00-bc7c-11e8-9d03-64cf245fd82c.png)  |  ![](https://user-images.githubusercontent.com/11228182/45780701-c3fdf580-bc7b-11e8-9f48-0d883a640010.png)
+
+- This package supports the option of overriding the package views that Laravel provides. You can modify the view using [these instructions from the Larvel docs](https://laravel.com/docs/packages#views), as per your needs.
 
 ## Testing
 
