@@ -3,12 +3,12 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Only the mailables registered here can be accesed using this package
+    | Only the mailables registered here can be accessed using this package
     |--------------------------------------------------------------------------
     |
     | You have to add the mailables including their dependencies
     | in the following array. When asked for a mailable, the
-    | package will search it here for its defination.
+    | package will search it here for its definition.
     |
     | Eg: [ new OrderShipped(factory(Order::class)->create()) ]
     |
@@ -30,7 +30,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | The environments in which the url should be accesible
+    | The environments in which the url should be accessible
     |--------------------------------------------------------------------------
     |
     | If you don't want to use this package in production env
@@ -47,7 +47,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | The value should be an array of fully qualified
-    | class names of the middlware classes.
+    | class names of the middleware classes.
     |
     | Eg: [Authenticate::class, CheckForMaintenanceMode::class]
     | Don't forget to import the classes at the top!
