@@ -28,12 +28,12 @@ This will create the package's config file called `mailviewer.php` in the `confi
 return [
     /*
     |--------------------------------------------------------------------------
-    | Only the mailables registered here can be accesed using this package
+    | Only the mailables registered here can be accessed using this package
     |--------------------------------------------------------------------------
     |
     | You have to add the mailables including their dependencies
     | in the following array. When asked for a mailable, the
-    | package will search it here for its defination.
+    | package will search it here for its definition.
     |
     | Eg: [ new OrderShipped(factory(Order::class)->create()) ]
     |
@@ -55,7 +55,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | The environments in which the url should be accesible
+    | The environments in which the url should be accessible
     |--------------------------------------------------------------------------
     |
     | If you don't want to use this package in production env
@@ -95,7 +95,7 @@ List of all mails             |  A particular mail rendered
 :-------------------------:|:-------------------------:
 ![](https://user-images.githubusercontent.com/11228182/45781093-bb59ef00-bc7c-11e8-9d03-64cf245fd82c.png)  |  ![](https://user-images.githubusercontent.com/11228182/45780701-c3fdf580-bc7b-11e8-9f48-0d883a640010.png)
 
-- This package supports the option of overriding the package views that Laravel provides. You can modify the view using [these instructions from the Larvel docs](https://laravel.com/docs/packages#views), as per your needs.
+- This package supports the option of overriding the package views that Laravel provides. You can modify the view using [these instructions from the Laravel docs](https://laravel.com/docs/packages#views), as per your needs.
 
 ## Testing
 
