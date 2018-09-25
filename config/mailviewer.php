@@ -47,7 +47,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | The value should be an array of fully qualified
-    | class names of the middlware classes.
+    | class names of the middleware classes.
     |
     | Eg: [Authenticate::class, CheckForMaintenanceMode::class]
     | Don't forget to import the classes at the top!
