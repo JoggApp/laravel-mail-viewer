@@ -33,9 +33,16 @@ class MailViewerTest extends BaseTestCase
     }
 
     /** @test */
-    public function it_renders_the_mailable_on_its_dedicated_route()
+    public function it_renders_the_mailable_without_dependencies_on_its_dedicated_route()
     {
         $this->get(route('mv-mailviewer', 'TestEmailForMailViewer'))
+            ->assertSee('The test email view');
+    }
+
+    /** @test */
+    public function it_renders_the_mailable_with_dependencies_on_its_dedicated_route()
+    {
+        $this->get(route('mv-mailviewer', 'TestEmailWithDependencies'))
             ->assertSee('The test email view');
     }
 }
