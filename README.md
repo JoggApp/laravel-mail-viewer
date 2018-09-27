@@ -16,7 +16,7 @@ composer require joggapp/laravel-mail-viewer
 
 The package will automatically register itself.
 
-You will have to add the mailables and configure the other settings using the package's config file in order to to use this package. You can publish the config file with:
+You will have to add the mailables and configure the other settings using the package's config file in order to to use this package. Please read the comments/description for each config key thoroughly and set their values. You can publish the config file with:
 
 ```bash
 php artisan vendor:publish --provider="JoggApp\MailViewer\MailViewerServiceProvider"
@@ -41,8 +41,16 @@ return [
     |
     | The package will look for the equivalent factory if the
     | dependency is an eloquent model. So don't forget to
-    | create those factories. Also, don't forget to import
-    | these classes at the top :)
+    | create those factories. However, things like the factory
+    | state & times/count feature aren't supported for the factories.
+    | Eg:
+    | What the package supports: factory(Order::class)->create();
+    | What the package doesn't support: factory(Order::class, 5)->state('pending')->create();
+    |
+    | The package will try to resolve all other non-eloquent objects
+    | using the Laravel's service container.
+    |
+    | Also, don't forget to import these classes at the top :)
     |
     | eg: 'mailables' => [
     |       OrderShipped::class => [

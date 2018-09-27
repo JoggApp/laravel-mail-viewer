@@ -1,5 +1,8 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v2.0.1 (28-09-2018)
+- The package now attempts to instantiate non eloquent objects using the container if no factory exists.
+
 ## v2.0.0 (27-09-2018)
 - Major changes in how the mailables are registered in the config file.
 - Please read the comments in the config file for the 'mailable' key and update yours accordingly.
