@@ -10,7 +10,22 @@ return [
     | in the following array. When asked for a mailable, the
     | package will search it here for its definition.
     |
-    | Eg: [ new OrderShipped(factory(Order::class)->create()) ]
+    | Add the mailable definition as shown below in the example.
+    | The mailable class will be the key and the dependencies
+    | of the mailable class will be defined in an array as well.
+    |
+    | The package will look for the equivalent factory if the
+    | dependency is an eloquent model. So don't forget to
+    | create those factories. Also, don't forget to import
+    | these classes at the top :)
+    |
+    | eg: 'mailables' => [
+    |       OrderShipped::class => [
+    |          Order::class,
+    |         'Personal thank you message',
+    |       ],
+    |      MailWithNoDependency::class => []
+    |    ]
     |
     */
 

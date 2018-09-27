@@ -12,9 +12,9 @@ class MailViewerServiceProvider extends ServiceProvider
             __DIR__ . '/../config/mailviewer.php' => config_path('mailviewer.php'),
         ]);
 
-        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
 
-        $this->loadViewsFrom(__DIR__ . '/views', 'mailviewer');
+        $this->loadViewsFrom(__DIR__ . '/../views', 'mailviewer');
     }
 
     public function register()

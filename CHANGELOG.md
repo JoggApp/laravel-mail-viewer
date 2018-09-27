@@ -1,5 +1,11 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v2.0.0 (27-09-2018)
+- Major changes in how the mailables are registered in the config file.
+- Please read the comments in the config file for the 'mailable' key and update yours accordingly.
+- The config file is now cacheable as well as serializable.
+- Directory structure changed.
+
 ## v1.0.1 (20-09-2018)
 - Updated readme
 

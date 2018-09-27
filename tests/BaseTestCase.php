@@ -4,6 +4,7 @@ namespace JoggApp\MailViewer\Tests;
 
 use JoggApp\MailViewer\MailViewerServiceProvider;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailForMailViewer;
+use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies;
 use Orchestra\Testbench\TestCase;
 
 class BaseTestCase extends TestCase
@@ -19,7 +20,13 @@ class BaseTestCase extends TestCase
 
         $app['config']->set(
             'mailviewer.mailables',
-            [new TestEmailForMailViewer()]
+            [
+                TestEmailForMailViewer::class => [],
+                TestEmailWithDependencies::class => [
+                    \stdClass::class,
+                    'Some name'
+                ]
+            ]
         );
 
         $app['config']->set('mailviewer.url', 'mails');
