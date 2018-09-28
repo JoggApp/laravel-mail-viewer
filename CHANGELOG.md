@@ -1,5 +1,8 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v2.0.2 (29-09-2018)
+- Fix class check and cover all data types.
+
 ## v2.0.1 (28-09-2018)
 - The package now attempts to instantiate non eloquent objects using the container if no factory exists.
 
