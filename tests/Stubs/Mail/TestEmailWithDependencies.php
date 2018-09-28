@@ -15,7 +15,7 @@ class TestEmailWithDependencies extends Mailable
      *
      * @return void
      */
-    public function __construct(\stdClass $someObject, string $name)
+    public function __construct(array $arr, \stdClass $someObject, string $name, int $number)
     {
         //
     }

@@ -23,8 +23,10 @@ class BaseTestCase extends TestCase
             [
                 TestEmailForMailViewer::class => [],
                 TestEmailWithDependencies::class => [
+                    [],
                     \stdClass::class,
-                    'Some name'
+                    'Some name',
+                    7
                 ]
             ]
         );
