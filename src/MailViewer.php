@@ -42,7 +42,7 @@ class MailViewer
                 $args = [];
 
                 foreach ($dependencies as $dependency) {
-                    if (class_exists($dependency)) {
+                    if (is_string($dependency) && class_exists($dependency)) {
                         if (isset($eloquentFactory[$dependency])) {
                             $args[] = factory($dependency)->create();
                         } else {
@@ -70,7 +70,7 @@ class MailViewer
             $givenParameters = [];
 
             foreach ($dependencies as $dependency) {
-                $givenParameters[] = class_exists($dependency)
+                $givenParameters[] = is_string($dependency) && class_exists($dependency)
                     ? (new ReflectionClass($dependency))->getName()
                     : getType($dependency);
             }
@@ -78,12 +78,13 @@ class MailViewer
             $constructorParameters = [];
 
             foreach ($reflection->getConstructor()->getParameters() as $parameter) {
-                $constructorParameters[] = $parameter->getType()->getName();
+                $constructorParameters[] = $parameter->getType()->getName() == 'int' ? 'integer' : $parameter->getType()->getName();
             }
 
             if ($constructorParameters !== $givenParameters) {
                 throw new Exception(
-                    "The arguments passed for {$mailable} in the config/mailviewer.php file do not match with the constructor params of the {$mailable} class or the constructor params of the {$mailable} aren't typehinted"
+                    "The arguments passed for {$mailable} in the config/mailviewer.php file do not match with the constructor 
+                    params of the {$mailable} class or the constructor params of the {$mailable} class aren't typehinted"
                 );
             }
 
