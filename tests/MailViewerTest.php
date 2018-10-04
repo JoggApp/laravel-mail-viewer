@@ -50,6 +50,7 @@ class MailViewerTest extends BaseTestCase
     public function it_renders_the_mailable_with_state_on_its_dedicated_route()
     {
         $this->get(route('mv-mailviewer', 'TestEmailWithState'))
-            ->assertSee('The test email view');
+            ->assertSee('The test email view')
+            ->assertSee('Is awesome: yes');
     }
 }

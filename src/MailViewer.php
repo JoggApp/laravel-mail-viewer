@@ -55,7 +55,7 @@ class MailViewer
 
                     if (is_string($dependency) && class_exists($dependency)) {
                         if (isset($eloquentFactory[$dependency])) {
-                            $args[] = factory($dependency)->states($factoryStates)->create();
+                            $args[] = factory($dependency)->states($factoryStates)->make();
                         } else {
                             $args[] = app($dependency);
                         }

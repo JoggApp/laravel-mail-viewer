@@ -5,17 +5,20 @@ namespace JoggApp\MailViewer\Tests\Stubs\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use JoggApp\MailViewer\Tests\Stubs\Models\Test;
 
 class TestEmailWithState extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $object;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(\stdClass $object)
+    public function __construct(Test $object)
     {
         $this->object = $object;
     }
@@ -27,6 +30,6 @@ class TestEmailWithState extends Mailable
      */
     public function build()
     {
-        return $this->view('mailviewer::stubs.emailtestview');
+        return $this->view('mailviewer::stubs.emailtestview_withstate');
     }
 }
