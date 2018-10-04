@@ -5,6 +5,7 @@ namespace JoggApp\MailViewer\Tests;
 use JoggApp\MailViewer\MailViewerServiceProvider;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailForMailViewer;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies;
+use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithState;
 use Orchestra\Testbench\TestCase;
 
 class BaseTestCase extends TestCase
@@ -27,6 +28,12 @@ class BaseTestCase extends TestCase
                     \stdClass::class,
                     'Some name',
                     7
+                ],
+                TestEmailWithState::class => [
+                    [
+                        'class' => \stdClass::class,
+                        'states' => ['is-awesome']
+                    ]
                 ]
             ]
         );
