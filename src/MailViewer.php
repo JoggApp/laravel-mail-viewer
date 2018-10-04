@@ -47,7 +47,7 @@ class MailViewer
                     if (is_array($dependency)) {
                         // Check if the dependency array contains factory states
                         if (in_array('states', array_keys($dependency)) === true) {
-                            // Set the states and dependency
+                            // Set the states and actual dependency class
                             $factoryStates = $dependency['states'];
                             $dependency = $dependency['class'];
                         }
@@ -102,8 +102,7 @@ class MailViewer
 
             if ($constructorParameters !== $givenParameters) {
                 throw new Exception(
-                    "The arguments passed for {$mailable} in the config/mailviewer.php file do not match with the constructor
-                    params of the {$mailable} class or the constructor params of the {$mailable} class aren't typehinted"
+                    "The arguments passed for {$mailable} in the config/mailviewer.php file do not match with the constructor params of the {$mailable} class or the constructor params of the {$mailable} class aren't typehinted"
                 );
             }
 
