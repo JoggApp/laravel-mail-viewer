@@ -20,7 +20,7 @@ class MailViewerServiceProvider extends ServiceProvider
         if (app()->environment() === 'testing') {
             $this->app->singleton(EloquentFactory::class, function ($app) {
                 $faker = $app->make(\Faker\Generator::class);
-                $factories_path = __DIR__.'/../database/factories';
+                $factories_path = __DIR__.'/../tests/Factories';
 
                 return EloquentFactory::construct($faker, $factories_path);
             });
