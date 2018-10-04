@@ -42,9 +42,18 @@ class MailViewer
                 $args = [];
 
                 foreach ($dependencies as $dependency) {
+                    $factoryStates = [];
+
+                    if (is_array($dependency)) {
+                        if (in_array('states', array_keys($dependency))) {
+                            $factoryStates = $dependency['states'];
+                            $dependency = $dependency['class'];
+                        }
+                    }
+
                     if (is_string($dependency) && class_exists($dependency)) {
                         if (isset($eloquentFactory[$dependency])) {
-                            $args[] = factory($dependency)->create();
+                            $args[] = factory($dependency)->states($factoryStates)->make();
                         } else {
                             $args[] = app($dependency);
                         }
@@ -70,6 +79,12 @@ class MailViewer
             $givenParameters = [];
 
             foreach ($dependencies as $dependency) {
+                if (is_array($dependency)) {
+                    if (in_array('states', array_keys($dependency))) {
+                        $dependency = $dependency['class'];
+                    }
+                }
+
                 $givenParameters[] = is_string($dependency) && class_exists($dependency)
                     ? (new ReflectionClass($dependency))->getName()
                     : getType($dependency);
@@ -83,7 +98,7 @@ class MailViewer
 
             if ($constructorParameters !== $givenParameters) {
                 throw new Exception(
-                    "The arguments passed for {$mailable} in the config/mailviewer.php file do not match with the constructor 
+                    "The arguments passed for {$mailable} in the config/mailviewer.php file do not match with the constructor
                     params of the {$mailable} class or the constructor params of the {$mailable} class aren't typehinted"
                 );
             }

@@ -16,24 +16,38 @@ return [
     |
     | The package will look for the equivalent factory if the
     | dependency is an eloquent model. So don't forget to
-    | create those factories. However, things like the factory
-    | state & times/count feature aren't supported for the factories.
+    | create those factories. If you want a specific state to
+    | be used for your dependency you will have to pass an array
+    | with 'class' and 'states' keys. The class key will have the
+    | name of the dependency and states should contain an array of
+    | factory states you want to apply to the factory, see the
+    | MailWithDependencyStates example below.
+    |
+    | Please note that the factory times/count feature isn't
+    | supported for the factories.
     | Eg:
     | What the package supports: factory(Order::class)->create();
-    | What the package doesn't support: factory(Order::class, 5)->state('pending')->create();
+    | What the package doesn't support: factory(Order::class, 5)->create();
     |
     | The package will try to resolve all other non-eloquent objects
     | using the Laravel's service container.
     |
     | Also, don't forget to import these classes at the top :)
     |
-    | eg: 'mailables' => [
-    |       OrderShipped::class => [
-    |          Order::class,
+    | eg:
+    | 'mailables' => [
+    |     OrderShipped::class => [
+    |         Order::class,
     |         'Personal thank you message',
-    |       ],
-    |      MailWithNoDependency::class => []
-    |    ]
+    |     ],
+    |     MailWithDependencyStates::class => [
+    |         [
+    |             'class' => Order::class,
+    |             'states' => ['state1', 'state2']
+    |         ]
+    |     ],
+    |     MailWithNoDependency::class => []
+    | ]
     |
     */
 
