@@ -1,5 +1,8 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v2.1.1 (05-10-2018)
+- [Bug fix](https://github.com/JoggApp/laravel-mail-viewer/pull/11)
+
 ## v2.1.0 (05-10-2018)
 - We can now define the [factory states](https://laravel.com/docs/5.7/database-testing#factory-states) to be used for any dependency of a mailable, if the dependency is an eloquent model. [PR for this feature](https://github.com/JoggApp/laravel-mail-viewer/pull/10)
 - Big thanks & credits to [Wouter Peschier](https://github.com/kielabokkie) for making this possible :)  
