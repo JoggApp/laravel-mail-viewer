@@ -12,6 +12,20 @@ use Orchestra\Testbench\TestCase;
 
 class BaseTestCase extends TestCase
 {
+    public function setUp()
+    {
+        parent::setUp();
+
+        $this->withFactories(__DIR__ . '/database/factories');
+
+        $this->loadMigrationsFrom([
+            '--database' => 'testing',
+            '--path' => realpath(__DIR__ . '/database/migrations')
+        ]);
+
+        $this->artisan('migrate', ['--database' => 'testing']);
+    }
+
     protected function getPackageProviders($app)
     {
         return [MailViewerServiceProvider::class];
@@ -44,11 +58,13 @@ class BaseTestCase extends TestCase
         $app['config']->set('mailviewer.allowed_environments', ['local', 'staging', 'testing']);
         $app['config']->set('mailviewer.middlewares', []);
 
-        $app->singleton(EloquentFactory::class, function ($app) {
-            $faker = $app->make(\Faker\Generator::class);
-            $factories_path = __DIR__ . '/Factories';
+        $app['config']->set('database.default', 'testbench');
+        $app['config']->set('database.connections.testbench', [
+           'driver' => 'sqlite',
+           'database' => ':memory:',
+           'prefix' => '',
+        ]);
 
-            return EloquentFactory::construct($faker, $factories_path);
-        });
+        $app['config']->set('app.debug', env('APP_DEBUG', true));
     }
 }
