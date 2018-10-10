@@ -67,9 +67,9 @@ class MailViewer
 
                 return new $mailable(...$args);
             }
-        }
 
-        DB::rollBack();
+            DB::rollBack();
+        }
 
         throw new Exception("No mailable called {$mail} is registered in config/mailviewer.php file");
     }
