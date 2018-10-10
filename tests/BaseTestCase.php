@@ -19,7 +19,7 @@ class BaseTestCase extends TestCase
 
         $this->loadMigrationsFrom([
             '--database' => 'testing',
-            '--path' => realpath(__DIR__ . '/database/migrations')
+            '--path' => __DIR__ . '/database/migrations'
         ]);
 
         $this->artisan('migrate', ['--database' => 'testing']);
