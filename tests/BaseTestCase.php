@@ -15,11 +15,11 @@ class BaseTestCase extends TestCase
     {
         parent::setUp();
 
-        $this->withFactories(__DIR__ . '/database/factories');
+        $this->withFactories(__DIR__ . '/Database/Factories');
 
         $this->loadMigrationsFrom([
             '--database' => 'testing',
-            '--path' => __DIR__ . '/database/migrations'
+            '--path' => __DIR__ . '/Database/Migrations'
         ]);
 
         $this->artisan('migrate', ['--database' => 'testing']);
