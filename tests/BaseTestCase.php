@@ -2,7 +2,6 @@
 
 namespace JoggApp\MailViewer\Tests;
 
-use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 use JoggApp\MailViewer\MailViewerServiceProvider;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailForMailViewer;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies;
