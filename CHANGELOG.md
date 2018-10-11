@@ -1,5 +1,9 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v2.2.0 (11-10-2018)
+- The package now uses DB transactions. [PR for this feature](https://github.com/JoggApp/laravel-mail-viewer/pull/12)
+- Big thanks & credits to [Wouter Peschier](https://github.com/kielabokkie) for making this possible :)
+
 ## v2.1.1 (05-10-2018)
 - [Bug fix](https://github.com/JoggApp/laravel-mail-viewer/pull/11)
 
