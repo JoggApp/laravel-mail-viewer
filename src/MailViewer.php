@@ -4,6 +4,7 @@ namespace JoggApp\MailViewer;
 
 use Exception;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
+use Illuminate\Support\Facades\DB;
 use ReflectionClass;
 
 class MailViewer
@@ -33,6 +34,8 @@ class MailViewer
 
     public static function find(string $mail)
     {
+        DB::beginTransaction();
+
         $eloquentFactory = app(EloquentFactory::class);
 
         foreach (config('mailviewer.mailables', []) as $mailable => $dependencies) {
@@ -53,7 +56,7 @@ class MailViewer
 
                     if (is_string($dependency) && class_exists($dependency)) {
                         if (isset($eloquentFactory[$dependency])) {
-                            $args[] = factory($dependency)->states($factoryStates)->make();
+                            $args[] = factory($dependency)->states($factoryStates)->create();
                         } else {
                             $args[] = app($dependency);
                         }
@@ -64,6 +67,8 @@ class MailViewer
 
                 return new $mailable(...$args);
             }
+
+            DB::rollBack();
         }
 
         throw new Exception("No mailable called {$mail} is registered in config/mailviewer.php file");
