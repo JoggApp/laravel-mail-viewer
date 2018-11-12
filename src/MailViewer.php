@@ -97,15 +97,17 @@ class MailViewer
 
             $constructorParameters = [];
 
-            for($i = 0; $i < count( $reflection->getConstructor()->getParameters()); $i++) {
+            for ($i = 0; $i < count($reflection->getConstructor()->getParameters()); $i++) {
                 $parameter = $reflection->getConstructor()->getParameters()[$i];
+
                 if (empty($parameter->getType())) {
-                    $constructorParameters[$i] =  $givenParameters[$i];
+                    $constructorParameters[$i] = $givenParameters[$i];
                     continue;
                 }
+
                 $constructorParameters[] = $parameter->getType()->getName() == 'int' ? 'integer' : $parameter->getType()->getName();
             }
-            
+
             if ($constructorParameters !== $givenParameters) {
                 throw new Exception(
                     "The arguments passed for {$mailable} in the config/mailviewer.php file do not match with the constructor

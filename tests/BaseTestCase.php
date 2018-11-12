@@ -42,7 +42,8 @@ class BaseTestCase extends TestCase
                     [],
                     \stdClass::class,
                     'Some name',
-                    7
+                    7,
+                    null
                 ],
                 TestEmailWithState::class => [
                     [

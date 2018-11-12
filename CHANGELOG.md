@@ -1,5 +1,9 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v3.0.0 (13-11-2018)
+- If the constructor dependency is not type hinted it will trust the user input in the config file as a replacement. [PR for this feature](https://github.com/JoggApp/laravel-mail-viewer/pull/15)
+- Big thanks & credits to [Junhai](https://github.com/starvsion) for making this possible :)
+
 ## v2.2.0 (11-10-2018)
 - The package now uses DB transactions. [PR for this feature](https://github.com/JoggApp/laravel-mail-viewer/pull/12)
 - Big thanks & credits to [Wouter Peschier](https://github.com/kielabokkie) for making this possible :)
