@@ -48,7 +48,7 @@ class MailViewer
                     $factoryStates = [];
 
                     if (is_array($dependency)) {
-                        if (in_array('states', array_keys($dependency))) {
+                        if (in_array('states', array_keys($dependency), true)) {
                             $factoryStates = $dependency['states'];
                             $dependency = $dependency['class'];
                         }
@@ -85,7 +85,7 @@ class MailViewer
 
             foreach ($dependencies as $dependency) {
                 if (is_array($dependency)) {
-                    if (in_array('states', array_keys($dependency))) {
+                    if (in_array('states', array_keys($dependency), true)) {
                         $dependency = $dependency['class'];
                     }
                 }

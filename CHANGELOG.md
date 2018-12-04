@@ -1,5 +1,8 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v3.1.0 (05-12-2018)
+- Fixed the behaviour of in_array by enabling strict checking.
+
 ## v3.0.0 (13-11-2018)
 - If the constructor dependency is not type hinted it will trust the user input in the config file as a replacement. [PR for this feature](https://github.com/JoggApp/laravel-mail-viewer/pull/15)
 - Big thanks & credits to [Junhai](https://github.com/starvsion) for making this possible :)
