@@ -1,5 +1,8 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v4.0.0 (27-02-2019)
+- Now supports Laravel v5.8
+
 ## v3.1.0 (05-12-2018)
 - Fixed the behaviour of in_array by enabling strict checking.
 
