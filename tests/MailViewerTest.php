@@ -6,7 +6,7 @@ class MailViewerTest extends BaseTestCase
 {
     protected $packageUrl;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
