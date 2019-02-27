@@ -1,5 +1,8 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v4.0.3 (27-02-2019)
+- Update travis config
+
 ## v4.0.2 (27-02-2019)
 - drop php v7.1 support
 
