@@ -1,5 +1,11 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v4.0.2 (27-02-2019)
+- drop php v7.1 support
+
+## v4.0.1 (27-02-2019)
+- phpunit update
+
 ## v4.0.0 (27-02-2019)
 - Now supports Laravel v5.8
 
