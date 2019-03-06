@@ -35,22 +35,32 @@ class MailViewerTest extends BaseTestCase
     /** @test */
     public function it_renders_the_mailable_without_dependencies_on_its_dedicated_route()
     {
-        $this->get(route('mv-mailviewer', 'TestEmailForMailViewer'))
+        $this->get(route('mv-mailviewer', 'JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailForMailViewer'))
             ->assertSee('The test email view');
     }
 
     /** @test */
     public function it_renders_the_mailable_with_dependencies_on_its_dedicated_route()
     {
-        $this->get(route('mv-mailviewer', 'TestEmailWithDependencies'))
+        $this->get(route('mv-mailviewer', 'JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies'))
             ->assertSee('The test email view');
     }
 
     /** @test */
     public function it_renders_the_mailable_with_state_on_its_dedicated_route()
     {
-        $this->get(route('mv-mailviewer', 'TestEmailWithState'))
+        $this->get(route('mv-mailviewer', 'JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithState'))
             ->assertSee('The test email view')
             ->assertSee('Is awesome: yes');
+    }
+
+    /** @test */
+    public function it_renders_the_correct_mailable_having_similar_class_name_as_another_mailable_in_different_namespace()
+    {
+        $this->get(route('mv-mailviewer', 'JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceOne\TestEmail'))
+            ->assertSee('The test email view for email in namespace one.');
+
+        $this->get(route('mv-mailviewer', 'JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceTwo\TestEmail'))
+            ->assertSee('The test email view for email in namespace two.');
     }
 }

@@ -1,0 +1,1 @@
+The test email view for email in namespace two.

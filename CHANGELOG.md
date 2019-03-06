@@ -1,5 +1,9 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v4.0.4 (06-03-2019)
+- The package now renders the correct mailable having similar class name as another mailable in different namespace.
+- Big thanks to [Thomas Kane](https://github.com/thomasjohnkane) for pointing out [this issue](https://github.com/JoggApp/laravel-mail-viewer/issues/18).
+
 ## v4.0.3 (27-02-2019)
 - Update travis config
 

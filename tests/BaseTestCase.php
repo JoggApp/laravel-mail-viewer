@@ -3,6 +3,8 @@
 namespace JoggApp\MailViewer\Tests;
 
 use JoggApp\MailViewer\MailViewerServiceProvider;
+use JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceOne\TestEmail as TestEmailInNamespaceOne;
+use JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceTwo\TestEmail as TestEmailInNamespaceTwo;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailForMailViewer;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithState;
@@ -50,7 +52,9 @@ class BaseTestCase extends TestCase
                         'class' => Test::class,
                         'states' => ['is-awesome']
                     ]
-                ]
+                ],
+                TestEmailInNamespaceOne::class => [],
+                TestEmailInNamespaceTwo::class => []
             ]
         );
 

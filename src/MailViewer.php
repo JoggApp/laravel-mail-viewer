@@ -41,7 +41,7 @@ class MailViewer
         foreach (config('mailviewer.mailables', []) as $mailable => $dependencies) {
             $reflection = new ReflectionClass($mailable);
 
-            if ($reflection->getShortName() === $mail) {
+            if ($reflection->getName() === $mail) {
                 $args = [];
 
                 foreach ($dependencies as $dependency) {
@@ -115,7 +115,7 @@ class MailViewer
                 );
             }
 
-            $mails[] = $reflection->getShortName();
+            $mails[] = $reflection->getName();
         }
 
         return $mails;
