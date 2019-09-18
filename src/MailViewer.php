@@ -89,6 +89,11 @@ class MailViewer
                         $dependency = $dependency['class'];
                     }
                 }
+                
+                if (is_object($dependency)) {
+                    $givenParameters[] = get_class($dependency);
+                    continue;
+                }
 
                 $givenParameters[] = is_string($dependency) && class_exists($dependency)
                     ? (new ReflectionClass($dependency))->getName()
@@ -107,15 +112,31 @@ class MailViewer
 
                 $constructorParameters[] = $parameter->getType()->getName() == 'int' ? 'integer' : $parameter->getType()->getName();
             }
-
-            if ($constructorParameters !== $givenParameters) {
+            
+            foreach ($givenParameters as $i => $param) {
+                if (! class_exists($param) && $param === $constructorParameters[$i]) {
+                    continue;
+                }
+                
+                $class = new ReflectionClass($param);
+                $lineage = [];
+    
+                do {
+                    $lineage[] = $class->getName();
+                    $lineage = array_unique(array_merge($lineage, $class->getTraitNames(), $class->getInterfaceNames()));
+                } while ($class = $class->getParentClass());
+                
+                if ( count(array_intersect($lineage, $constructorParameters)) !== 0) {
+                    continue;
+                }
+                
                 throw new Exception(
                     "The arguments passed for {$mailable} in the config/mailviewer.php file do not match with the constructor
                     params of the {$mailable} class or the constructor params of the {$mailable} class aren't typehinted"
                 );
             }
-
-            $mails[] = $reflection->getName();
+    
+            $mails[] = $reflection->getShortName();
         }
 
         return $mails;
