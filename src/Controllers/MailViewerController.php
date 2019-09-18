@@ -1,10 +1,10 @@
 <?php
 
-namespace JoggApp\MailViewer\Controllers;
+namespace JoaonzangoII\MailViewer\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\App;
-use JoggApp\MailViewer\MailViewer;
+use JoaonzangoII\MailViewer\MailViewer;
 
 class MailViewerController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace JoggApp\MailViewer;
+namespace JoaonzangoII\MailViewer;
 
 use Exception;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;

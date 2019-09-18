@@ -1,6 +1,6 @@
 <?php
 
-namespace JoggApp\MailViewer\Tests\Stubs\Models;
+namespace JoaonzangoII\MailViewer\Tests\Stubs\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

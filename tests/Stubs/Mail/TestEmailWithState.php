@@ -1,11 +1,11 @@
 <?php
 
-namespace JoggApp\MailViewer\Tests\Stubs\Mail;
+namespace JoaonzangoII\MailViewer\Tests\Stubs\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use JoggApp\MailViewer\Tests\Stubs\Models\Test;
+use JoaonzangoII\MailViewer\Tests\Stubs\Models\Test;
 
 class TestEmailWithState extends Mailable
 {

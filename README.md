@@ -1,8 +1,8 @@
 # View all your mailables at a single place
 
-[![Latest Version](https://img.shields.io/github/release/JoggApp/laravel-mail-viewer.svg?style=flat-rounded)](https://github.com/JoggApp/laravel-mail-viewer/releases)
-[![Build Status](https://travis-ci.org/JoggApp/laravel-mail-viewer.svg?branch=master)](https://travis-ci.org/JoggApp/laravel-mail-viewer)
-[![Total Downloads](https://img.shields.io/packagist/dt/JoggApp/laravel-mail-viewer.svg?style=flat-rounded&colorB=brightgreen)](https://packagist.org/packages/JoggApp/laravel-mail-viewer)
+[![Latest Version](https://img.shields.io/github/release/JoaonzangoII/laravel-mail-viewer.svg?style=flat-rounded)](https://github.com/JoaonzangoII/laravel-mail-viewer/releases)
+[![Build Status](https://travis-ci.org/JoaonzangoII/laravel-mail-viewer.svg?branch=master)](https://travis-ci.org/JoaonzangoII/laravel-mail-viewer)
+[![Total Downloads](https://img.shields.io/packagist/dt/JoaonzangoII/laravel-mail-viewer.svg?style=flat-rounded&colorB=brightgreen)](https://packagist.org/packages/JoaonzangoII/laravel-mail-viewer)
 
 The Design and content team members often need access to the emails your app will be sending out to the users. This is a fairly simple package that makes it possible and tries to minimize developer dependency. By using this package, you can have a dedicated route to view all your mailables at a single place. Having shareable URLs to view the mails makes the team co-ordination more smooth.
 
@@ -11,7 +11,7 @@ The Design and content team members often need access to the emails your app wil
 You can install this package via composer using this command:
 
 ```bash
-composer require joggapp/laravel-mail-viewer
+composer require JoaonzangoII/laravel-mail-viewer
 ```
 
 The package will automatically register itself.
@@ -19,7 +19,7 @@ The package will automatically register itself.
 You will have to add the mailables and configure the other settings using the package's config file in order to to use this package. Please read the comments/description for each config key thoroughly and set their values. You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="JoggApp\MailViewer\MailViewerServiceProvider"
+php artisan vendor:publish --provider="JoaonzangoII\MailViewer\MailViewerServiceProvider"
 ```
 
 This will create the package's config file called `mailviewer.php` in the `config` directory. These are the contents of the published config file:

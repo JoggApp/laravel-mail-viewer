@@ -1,6 +1,6 @@
 {
-    "name": "joggapp/laravel-mail-viewer",
-    "description": "View all your mailables at a single place",
+    "name": "joaonzangoii/laravel-mail-viewer",
+    "description": "View all your mailables at a single place (fork of: joggapp/laravel-mail-viewer)",
     "license": "MIT",
     "authors": [
         {
@@ -10,12 +10,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "JoggApp\\MailViewer\\": "src"
+            "JoaonzangoII\\MailViewer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "JoggApp\\MailViewer\\Tests\\": "tests"
+            "JoaonzangoII\\MailViewer\\Tests\\": "tests"
         }
     },
     "require": {
@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "JoggApp\\MailViewer\\MailViewerServiceProvider"
+                "JoaonzangoII\\MailViewer\\MailViewerServiceProvider"
             ]
         }
     },

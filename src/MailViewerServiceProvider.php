@@ -1,6 +1,6 @@
 <?php
 
-namespace JoggApp\MailViewer;
+namespace JoaonzangoII\MailViewer;
 
 use Illuminate\Support\ServiceProvider;
 

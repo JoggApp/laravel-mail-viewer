@@ -1,6 +1,6 @@
 <?php
 
-namespace JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceTwo;
+namespace JoaonzangoII\MailViewer\Tests\Stubs\Mail\NamespaceTwo;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;

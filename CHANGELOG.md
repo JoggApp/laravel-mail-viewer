@@ -7,7 +7,7 @@ All notable changes to the Laravel Mail Viewer be documented in this file
 
 ## v4.0.4 (06-03-2019)
 - The package now renders the correct mailable having similar class name as another mailable in different namespace.
-- Big thanks to [Thomas Kane](https://github.com/thomasjohnkane) for pointing out [this issue](https://github.com/JoggApp/laravel-mail-viewer/issues/18).
+- Big thanks to [Thomas Kane](https://github.com/thomasjohnkane) for pointing out [this issue](https://github.com/JoaonzangoII/laravel-mail-viewer/issues/18).
 
 ## v4.0.3 (27-02-2019)
 - Update travis config
@@ -25,18 +25,18 @@ All notable changes to the Laravel Mail Viewer be documented in this file
 - Fixed the behaviour of in_array by enabling strict checking.
 
 ## v3.0.0 (13-11-2018)
-- If the constructor dependency is not type hinted it will trust the user input in the config file as a replacement. [PR for this feature](https://github.com/JoggApp/laravel-mail-viewer/pull/15)
+- If the constructor dependency is not type hinted it will trust the user input in the config file as a replacement. [PR for this feature](https://github.com/JoaonzangoII/laravel-mail-viewer/pull/15)
 - Big thanks & credits to [Junhai](https://github.com/starvsion) for making this possible :)
 
 ## v2.2.0 (11-10-2018)
-- The package now uses DB transactions. [PR for this feature](https://github.com/JoggApp/laravel-mail-viewer/pull/12)
+- The package now uses DB transactions. [PR for this feature](https://github.com/JoaonzangoII/laravel-mail-viewer/pull/12)
 - Big thanks & credits to [Wouter Peschier](https://github.com/kielabokkie) for making this possible :)
 
 ## v2.1.1 (05-10-2018)
-- [Bug fix](https://github.com/JoggApp/laravel-mail-viewer/pull/11)
+- [Bug fix](https://github.com/JoaonzangoII/laravel-mail-viewer/pull/11)
 
 ## v2.1.0 (05-10-2018)
-- We can now define the [factory states](https://laravel.com/docs/5.7/database-testing#factory-states) to be used for any dependency of a mailable, if the dependency is an eloquent model. [PR for this feature](https://github.com/JoggApp/laravel-mail-viewer/pull/10)
+- We can now define the [factory states](https://laravel.com/docs/5.7/database-testing#factory-states) to be used for any dependency of a mailable, if the dependency is an eloquent model. [PR for this feature](https://github.com/JoaonzangoII/laravel-mail-viewer/pull/10)
 - Big thanks & credits to [Wouter Peschier](https://github.com/kielabokkie) for making this possible :)  
 
 ## v2.0.2 (29-09-2018)

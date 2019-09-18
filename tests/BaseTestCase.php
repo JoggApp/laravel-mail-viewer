@@ -1,14 +1,14 @@
 <?php
 
-namespace JoggApp\MailViewer\Tests;
+namespace JoaonzangoII\MailViewer\Tests;
 
-use JoggApp\MailViewer\MailViewerServiceProvider;
-use JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceOne\TestEmail as TestEmailInNamespaceOne;
-use JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceTwo\TestEmail as TestEmailInNamespaceTwo;
-use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailForMailViewer;
-use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies;
-use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithState;
-use JoggApp\MailViewer\Tests\Stubs\Models\Test;
+use JoaonzangoII\MailViewer\MailViewerServiceProvider;
+use JoaonzangoII\MailViewer\Tests\Stubs\Mail\NamespaceOne\TestEmail as TestEmailInNamespaceOne;
+use JoaonzangoII\MailViewer\Tests\Stubs\Mail\NamespaceTwo\TestEmail as TestEmailInNamespaceTwo;
+use JoaonzangoII\MailViewer\Tests\Stubs\Mail\TestEmailForMailViewer;
+use JoaonzangoII\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies;
+use JoaonzangoII\MailViewer\Tests\Stubs\Mail\TestEmailWithState;
+use JoaonzangoII\MailViewer\Tests\Stubs\Models\Test;
 use Orchestra\Testbench\TestCase;
 
 class BaseTestCase extends TestCase

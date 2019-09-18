@@ -1,6 +1,6 @@
 <?php
 
-use JoggApp\MailViewer\Tests\Stubs\Models\Test;
+use JoaonzangoII\MailViewer\Tests\Stubs\Models\Test;
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
