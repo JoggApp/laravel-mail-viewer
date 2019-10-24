@@ -2,6 +2,8 @@
 
 namespace JoggApp\MailViewer\Tests;
 
+use JoggApp\MailViewer\MailViewer;
+
 class MailViewerTest extends BaseTestCase
 {
     protected $packageUrl;
@@ -62,5 +64,15 @@ class MailViewerTest extends BaseTestCase
 
         $this->get(route('mv-mailviewer', 'JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceTwo\TestEmail'))
             ->assertSee('The test email view for email in namespace two.');
+    }
+
+    /** @test */
+    public function it_does_not_fail_when_constructor_is_not_declared()
+    {
+        $mailer = MailViewer::prepareMails([
+            'JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithNoConstructor' => [],
+        ]);
+
+        $this->assertTrue(true);
     }
 }
