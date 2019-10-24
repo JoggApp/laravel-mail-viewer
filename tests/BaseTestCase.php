@@ -7,6 +7,7 @@ use JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceOne\TestEmail as TestEmailInNam
 use JoggApp\MailViewer\Tests\Stubs\Mail\NamespaceTwo\TestEmail as TestEmailInNamespaceTwo;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailForMailViewer;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies;
+use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithNoConstructor;
 use JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithState;
 use JoggApp\MailViewer\Tests\Stubs\Models\Test;
 use Orchestra\Testbench\TestCase;
@@ -40,6 +41,7 @@ class BaseTestCase extends TestCase
             'mailviewer.mailables',
             [
                 TestEmailForMailViewer::class => [],
+                TestEmailWithNoConstructor::class => [],
                 TestEmailWithDependencies::class => [
                     [],
                     \stdClass::class,
