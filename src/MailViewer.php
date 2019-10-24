@@ -97,15 +97,17 @@ class MailViewer
 
             $constructorParameters = [];
 
-            for ($i = 0; $i < count($reflection->getConstructor()->getParameters()); $i++) {
-                $parameter = $reflection->getConstructor()->getParameters()[$i];
+            if ($reflection->getConstructor()) {
+                for ($i = 0; $i < count($reflection->getConstructor()->getParameters()); $i++) {
+                    $parameter = $reflection->getConstructor()->getParameters()[$i];
 
-                if (empty($parameter->getType())) {
-                    $constructorParameters[$i] = $givenParameters[$i];
-                    continue;
+                    if (empty($parameter->getType())) {
+                        $constructorParameters[$i] = $givenParameters[$i];
+                        continue;
+                    }
+
+                    $constructorParameters[] = $parameter->getType()->getName() == 'int' ? 'integer' : $parameter->getType()->getName();
                 }
-
-                $constructorParameters[] = $parameter->getType()->getName() == 'int' ? 'integer' : $parameter->getType()->getName();
             }
 
             if ($constructorParameters !== $givenParameters) {
