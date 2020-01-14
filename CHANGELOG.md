@@ -1,5 +1,8 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v5.0.1 (14-01-2020)
+- Added Github Action Workflow for tests
+
 ## v5.0.0 (04-09-2019)
 - Now supports Laravel v6.0
 - Laravel v5.6.* & Laravel v5.7.* are no longer supported, min requirement is now v5.8.*
