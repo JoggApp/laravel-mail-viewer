@@ -1,5 +1,9 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v6.0.0 (03-03-2020)
+- Added Laravel v7.x support.
+- Dropped PHP v7.2 support, now PHP v7.3 is the minimum requirement.
+
 ## v5.0.1 (14-01-2020)
 - Added Github Action Workflow for tests
 
