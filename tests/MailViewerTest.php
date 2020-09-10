@@ -40,6 +40,13 @@ class MailViewerTest extends BaseTestCase
     }
 
     /** @test */
+    public function it_renders_the_mailable_without_dependencies_or_constructor_on_its_dedicated_route()
+    {
+        $this->get('/mails')
+            ->assertSee('All Mails');
+    }
+
+    /** @test */
     public function it_renders_the_mailable_with_dependencies_on_its_dedicated_route()
     {
         $this->get(route('mv-mailviewer', 'JoggApp\MailViewer\Tests\Stubs\Mail\TestEmailWithDependencies'))
