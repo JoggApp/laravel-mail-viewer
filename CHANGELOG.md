@@ -1,5 +1,9 @@
 All notable changes to the Laravel Mail Viewer be documented in this file
 
+## v7.0.0 (10-09-2020)
+- Added Laravel v8.x support.
+- Dropped Laravel v6 & PHPUnit v8 support.
+
 ## v6.0.0 (03-03-2020)
 - Added Laravel v7.x support.
 - Dropped PHP v7.2 support, now PHP v7.3 is the minimum requirement.

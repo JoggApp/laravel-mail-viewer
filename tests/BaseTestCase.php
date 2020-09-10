@@ -20,10 +20,7 @@ class BaseTestCase extends TestCase
 
         $this->withFactories(__DIR__ . '/Database/Factories');
 
-        $this->loadMigrationsFrom([
-            '--database' => 'testing',
-            '--path' => __DIR__ . '/Database/Migrations'
-        ]);
+        $this->loadMigrationsFrom(__DIR__ . '/Database/Migrations');
 
         $this->artisan('migrate', ['--database' => 'testing']);
     }
