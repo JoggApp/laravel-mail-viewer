@@ -1,3 +1,5 @@
+# This package has been archived and will no longer be maintained/updated. The reason being Laravel now itself provides a really convenient way to [preview mailables in the browser](https://laravel.com/docs/8.x/mail#rendering-mailables).
+
 # View all your mailables at a single place
 
 [![Latest Version](https://img.shields.io/github/release/JoggApp/laravel-mail-viewer.svg?style=flat-rounded)](https://github.com/JoggApp/laravel-mail-viewer/releases)
